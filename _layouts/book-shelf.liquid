@@ -1,0 +1,104 @@
+---
+layout: page
+---
+{{ content }}
+
+<style>
+  .bookshelf-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .book-entry {
+    width: 130px;
+    text-align: center;
+  }
+
+  .book-entry details {
+    cursor: pointer;
+  }
+
+  .book-entry summary {
+    list-style: none;
+  }
+
+  .book-entry summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .book-entry figure {
+    margin: 0;
+  }
+
+  .book-entry img {
+    height: 200px;
+    max-width: 130px;
+    object-fit: cover;
+  }
+
+  .book-caption {
+    margin-top: 0.45rem;
+    font-size: 0.78rem;
+    line-height: 1.25;
+  }
+
+  .book-title {
+    font-weight: 500;
+  }
+
+  .book-author {
+    color: var(--global-text-color-light);
+    margin-top: 0.15rem;
+  }
+</style>
+
+{% if page.collection and page.collection.size > 0 %}
+  {% assign collection = site[page.collection] | sort: 'started' %}
+  {% assign books_by_year = collection | group_by_exp: 'item', "item.started | date: '%Y'" | sort: 'name' | reverse %}
+
+  {% for year_group in books_by_year %}
+    <h2 id="y{{ year_group.name }}">{{ year_group.name }}</h2>
+
+    <ul class="bookshelf-list">
+      {% assign books_in_year = year_group.items | sort: 'started' %}
+
+      {% for item in books_in_year %}
+        <li class="book-entry">
+          <details>
+            <summary aria-label="Show title and author for {{ item.title }}">
+              <figure class="cover">
+                {% if item.cover %}
+                  <img
+                    alt="{{ item.title }} cover"
+                    src="{{ item.cover | prepend: page.covers | relative_url }}"
+                  >
+                {% elsif item.olid %}
+                  <img
+                    alt="{{ item.title }} cover"
+                    src="https://covers.openlibrary.org/b/olid/{{ item.olid }}-L.jpg?default=false"
+                  >
+                {% elsif item.isbn %}
+                  <img
+                    alt="{{ item.title }} cover"
+                    src="https://covers.openlibrary.org/b/isbn/{{ item.isbn }}-L.jpg?default=false"
+                  >
+                {% endif %}
+              </figure>
+            </summary>
+
+            <div class="book-caption">
+              <div class="book-title">{{ item.title }}</div>
+              {% if item.author %}
+                <div class="book-author">{{ item.author }}</div>
+              {% endif %}
+            </div>
+          </details>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,50 @@
+/*******************************************************************************
+ * Footer styles
+ ******************************************************************************/
+
+footer.fixed-bottom {
+  background-color: var(--global-footer-bg-color);
+  font-size: 0.75rem;
+
+  .container {
+    color: var(--global-footer-text-color);
+    padding-top: 9px;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+
+  a {
+    color: var(--global-footer-link-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+}
+
+footer.sticky-bottom {
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 0.85rem;
+  margin-top: auto;
+
+  .container {
+    text-align: center;
+  }
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body > .container {
+  flex: 1 0 auto;
+}
