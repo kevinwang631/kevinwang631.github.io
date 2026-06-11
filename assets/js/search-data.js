@@ -30,7 +30,12 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/books/";
               },
-            },{id: "books-four-reincarnations-poems",
+            },{id: "books-a-mathematician-39-s-apology",
+          title: 'A Mathematician&amp;#39;s Apology',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/a_mathematicians_apology/";
+            },},{id: "books-four-reincarnations-poems",
           title: 'Four Reincarnations: Poems',
           description: "",
           section: "Books",handler: () => {
