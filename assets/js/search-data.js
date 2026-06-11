@@ -45,6 +45,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/mathematica/";
+            },},{id: "books-solving-mathematical-problems-a-personal-perspective",
+          title: 'Solving Mathematical Problems: A Personal Perspective',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/solving_mathematical_problems/";
             },},{id: "books-the-drunkard-39-s-walk-how-randomness-rules-our-lives",
           title: 'The Drunkard&amp;#39;s Walk: How Randomness Rules Our Lives',
           description: "",
