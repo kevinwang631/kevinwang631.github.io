@@ -55,6 +55,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_drunkards_walk/";
+            },},{id: "books-the-man-who-knew-infinity-a-life-of-the-genius-ramanujan",
+          title: 'The Man Who Knew Infinity: A Life of the Genius Ramanujan',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_man_who_knew_infinity/";
             },},{id: "books-the-man-who-loved-only-numbers",
           title: 'The Man Who Loved Only Numbers',
           description: "",
