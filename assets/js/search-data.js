@@ -75,6 +75,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_official_stardew_valley_cookbook/";
+            },},{id: "books-the-origins-of-efficiency",
+          title: 'The Origins of Efficiency',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_origins_of_efficiency/";
             },},{id: "books-the-visual-display-of-quantitative-information",
           title: 'The Visual Display of Quantitative Information',
           description: "",
