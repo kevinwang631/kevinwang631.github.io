@@ -70,6 +70,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_man_who_loved_only_numbers/";
+            },},{id: "books-the-official-stardew-valley-cookbook",
+          title: 'The Official Stardew Valley Cookbook',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_official_stardew_valley_cookbook/";
             },},{id: "books-the-visual-display-of-quantitative-information",
           title: 'The Visual Display of Quantitative Information',
           description: "",
