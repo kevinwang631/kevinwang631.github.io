@@ -70,6 +70,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_man_who_loved_only_numbers/";
+            },},{id: "books-the-visual-display-of-quantitative-information",
+          title: 'The Visual Display of Quantitative Information',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_visual_display_of_quantitative_information/";
             },},{id: "books-under-a-white-sky-the-nature-of-the-future",
           title: 'Under a White Sky: The Nature of the Future',
           description: "",
