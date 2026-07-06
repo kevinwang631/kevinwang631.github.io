@@ -35,6 +35,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/a_mathematicians_apology/";
+            },},{id: "books-issue-1-origins",
+          title: 'Issue 1 - Origins',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/asimov_press_issue_1/";
             },},{id: "books-four-reincarnations-poems",
           title: 'Four Reincarnations: Poems',
           description: "",
