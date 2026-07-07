@@ -40,6 +40,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/asimov_press_issue_1/";
+            },},{id: "books-issue-2-capsule-edition",
+          title: 'Issue 2 - Capsule Edition',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/asimov_press_issue_2/";
             },},{id: "books-four-reincarnations-poems",
           title: 'Four Reincarnations: Poems',
           description: "",
