@@ -1,6 +1,6 @@
 ---
 layout: book-review
-title: "Issue 2 - Capsule Edition"
+title: "Issue 02: Technology"
 author: Asimov Press
 cover: assets/img/book_covers/asimov_press_issue_2.png
 olid: # use Open Library ID to fetch cover (if no `cover` is provided)
