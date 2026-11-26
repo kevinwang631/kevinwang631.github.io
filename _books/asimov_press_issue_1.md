@@ -1,6 +1,6 @@
 ---
 layout: book-review
-title: "Issue 1 - Origins"
+title: "Issue 01: Origins"
 author: Asimov Press
 cover: assets/img/book_covers/asimov_press_issue_1.jpg
 olid: # use Open Library ID to fetch cover (if no `cover` is provided)
